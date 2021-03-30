@@ -1,0 +1,43 @@
+import tkinter as tk
+window = tk.Tk()
+window.title("menu")
+window.geometry("500x500")
+
+menubar = tk.Menu(window)
+filemenu = tk.Menu(menubar,tearoff = False)
+filemenu.add_command(label = "gogo")
+filemenu.add_command(label="作弊指令")
+filemenu.add_separator()
+filemenu.add_command(label="EXIT")
+menubar.add_cascade(label="menu",menu = filemenu)
+
+
+filemenu2 = tk.Menu(menubar,tearoff = False)
+filemenu2.add_command(label = "stop")
+filemenu2.add_command(label="指令")
+filemenu2.add_separator()
+filemenu2.add_command(label="BACK")
+menubar.add_cascade(label="menu2",menu = filemenu2)
+
+filemenu3 = tk.Menu(menubar,tearoff = False)
+filemenu3.add_command(label = "攻擊")
+filemenu3.add_command(label="防禦")
+filemenu3.add_separator()
+filemenu3.add_command(label="zzzzz")
+filemenu2.add_cascade(label="menu",menu =filemenu3)
+
+filemenu4 = tk.Menu(menubar,tearoff = False)
+filemenu4.add_command(label = "睡覺")
+filemenu4.add_command(label="復活")
+filemenu4.add_separator()
+filemenu4.add_command(label="躺")
+menubar.add_cascade(label="menu3",menu = filemenu4)
+
+filemenu5 = tk.Menu(menubar,tearoff = False)
+filemenu5.add_command(label = "跳過")
+filemenu5.add_command(label="厲害")
+filemenu5.add_separator()
+filemenu5.add_command(label="放空")
+menubar.add_cascade(label="menu4",menu = filemenu5)
+window.config(menu = menubar)
+window.mainloop()
